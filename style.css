@@ -8,7 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    background-image: url(/assets/ФОН\ 1.svg);
+    background-image: url(../assets/ФОН\ 1.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
