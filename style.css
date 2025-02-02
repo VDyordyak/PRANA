@@ -8,7 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    background-image: url(../assets/ФОН\ 1.svg);
+    background-image: url(assets/ФОН\ 1.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
@@ -344,10 +344,10 @@ body {
 .international-achivements{
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 60%;
     margin-left: 2rem;
     justify-content: space-between;
-    
+    margin-top: 2rem;
 }
 .international-achivements .achivement{
     display: flex;
@@ -366,7 +366,7 @@ body {
 }
 .international-achivements .achivement .description{
     position: relative;
-    width: 150%;
+    width: 100%;
     padding-left: 2.5rem;
     margin-top: -2rem;
     font-style: normal;
@@ -376,17 +376,19 @@ body {
     text-transform: capitalize;
     color: #FFFFFF;
 }
+.international-achivements .achivement:last-child .description{
+    width: 140%;
+}
 .international-block .word-map{
     width: 40%;
     position: relative;
-    right: -10%;
     top: 2rem;
 }
 .international-block .word-map img{
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
-    right: -1.4rem;
+    right: -3.36rem;
 }
 
 /* Benefits block */
@@ -479,6 +481,49 @@ body {
 .contactus-block .contact-information .subtitle span{
     font-weight: bold;
 }
+.contacts-email, .contacts-phone {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 4.875rem;
+    margin: 1rem 0;    opacity: 0.5;
+    padding-left: 1rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.contacts-email::before, .contacts-phone::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(80, 177, 209, 0) 100%);
+    opacity: 0.45;
+    border-radius: 27px;
+}
+.email-informations .label{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    font-variant: all-small-caps;
+}
+
+.email-informations .email{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    font-variant: all-small-caps;
+}
+.contacts-email .contacts-icon, 
+.contacts-phone .contacts-icon{
+    padding-right: 1rem;
+}
 /* contact-form */
 .contact-form {
     display: flex;
@@ -499,6 +544,7 @@ body {
     background: linear-gradient(270deg, #FFFFFF 0%, rgba(57, 171, 226, 0) 139.16%);
     opacity: 0.45;
     border-radius: 9px;
+    z-index: -1;
 }
 .massage-form{
     padding: 2rem;
@@ -526,10 +572,6 @@ label {
     background: linear-gradient(90deg, #FFFFFF 0%, rgba(91, 192, 240, 0.5) 100%);
     border-radius: 17px;
     border: none;
-}
-
-.checkbox-group {
-
 }
 
 .checkbox-group p {
@@ -585,9 +627,91 @@ button{
     margin-top: 1rem;
 }
 
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+.footer-links{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
 
+.footer-links li{
+    list-style: none; /* Remove default bullets */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 12px;
+    font-variant: all-small-caps;
+}
 
-@media (max-width: 768px) {
+.footer-links a{
+    color: #FFFFFF;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* navbar */
+    .navbar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem 1.6rem;
+        color: white;
+        position: fixed;
+        top: 0;
+    }
+
+    .navbar .logo{
+        width: 20%;
+    }
+
+    .menu-container{
+        width: 100%;
+    }
+    
+    .navbar .logo img{
+        height: 2.2rem;
+        margin-left: 2rem;
+        width: auto;
+    }
+    .menu{
+        width: 95%;
+        gap: 1rem;
+    }
+    .menu li {
+        text-align: center;
+        padding-right: 0.5rem;
+    }
+
+    .menu-container .menu a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10xp;
+        line-height: 12px;
+        text-align: center;
+        font-variant: all-small-caps;
+
+        color: #FFFFFF;
+    }
+    /* Footer */
+    .footer{
+        width: 100%;
+    }
+    .footer-links{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 767px) {
     .mobile-hidden{
         display: none;
     }
