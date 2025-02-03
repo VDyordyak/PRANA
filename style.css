@@ -17,7 +17,7 @@ body {
 .content-block{
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 100%;
     padding: 0px 1.6rem;
 }
 
@@ -110,7 +110,7 @@ body {
 /* PRANA ist ein modernes dezentrales, smartes Be- und Ablüftungssystem mit Wärmerückgewinnung. */
     text-align: center;
     color: #FFFFFF;
-    font-size: 1.5;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 2rem;
     text-underline-position: from-font;
@@ -202,8 +202,8 @@ body {
     width: 100%;
     height: auto;
 }
-.points-block .points-text .points-title,
-.filter-block .filter-block-title,
+.points-block .title,
+.filter-block .title,
 .international-block .title {
     font-style: normal;
     text-align: center;
@@ -299,7 +299,7 @@ body {
     width: 40%;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.3;
+    font-size: 1.3rem;
     line-height: 1.5;
     text-align: center;
     font-variant: all-small-caps;
@@ -379,17 +379,20 @@ body {
 .international-achivements .achivement:last-child .description{
     width: 140%;
 }
-.international-block .word-map{
-    width: 40%;
-    position: relative;
-    top: 2rem;
+@media (min-width: 1024px){
+    .international-block .word-map{
+        width: 40%;
+        position: relative;
+        top: 2rem;
+    }
+    .international-block .word-map img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: -1.56rem;
+    }
 }
-.international-block .word-map img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: -3.36rem;
-}
+
 
 /* Benefits block */
 .benefits-block{
@@ -448,6 +451,7 @@ body {
 /* contactus-block */
 .contactus-block{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     margin-top: 4rem;
@@ -463,10 +467,8 @@ body {
 .contactus-block .contact-information .title{
     font-style: normal;
     font-weight: 800;
-    font-size: 55px;
-    line-height: 47px;
-    /* or 85% */
-
+    font-size: 3rem;
+    line-height: 1.2;
     color: #FFFFFF;
 }
 .contactus-block .contact-information .subtitle{
@@ -487,7 +489,7 @@ body {
     align-items: center;
     width: 100%;
     height: 4.875rem;
-    margin: 1rem 0;    opacity: 0.5;
+    margin: 1rem 0;
     padding-left: 1rem;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -654,32 +656,19 @@ button{
 .footer-links a{
     color: #FFFFFF;
 }
+.footer-links .privacy a{
+    text-decoration: none;
+}
+.desktop-hidden{
+    display: none;
+}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* navbar */
-    .navbar {
+@media (max-width: 1024px) {
+    .mobile-hidden{
+        display: none;
+    }
+    .desktop-hidden{
         display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.6rem 1.6rem;
-        color: white;
-        position: fixed;
-        top: 0;
-    }
-
-    .navbar .logo{
-        width: 20%;
-    }
-
-    .menu-container{
-        width: 100%;
-    }
-    
-    .navbar .logo img{
-        height: 2.2rem;
-        margin-left: 2rem;
-        width: auto;
     }
     .menu{
         width: 95%;
@@ -689,18 +678,182 @@ button{
         text-align: center;
         padding-right: 0.5rem;
     }
-
     .menu-container .menu a{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
-        font-size: 10xp;
-        line-height: 12px;
+        font-size: 1rem;
+        line-height: 1.5;
         text-align: center;
         font-variant: all-small-caps;
-
         color: #FFFFFF;
     }
+    /* Header*/
+    .header-block{
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    .header-block h1{
+        margin: 1rem 0;
+    }
+    .image-container{
+        width: 100%;
+    }
+    .image-container .image-box img{
+        width: 100%;
+        height: auto;
+    }
+    .header-block .title-block {
+        display: block;
+        width: 60%;
+        margin: 4rem auto 0;
+    }
+    .image-box.control-img img{
+        width: 15%;
+        top: 26%;
+        left: -3%;
+        /* transform: rotate(45deg); */
+    }
+    .image-box.app-img img{
+        width: 25%;
+        right: -10%;
+        top:28%;
+        /* transform: rotate(-45deg); */
+    }
+
+
+    .content-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px 0rem;
+    }
+
+    .points-block, .filter-block, .benefits-block, .contactus-block{
+        padding: 0 4rem;
+    }
+    /* Points block */
+    .points-block{ 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .points-block .points-text{
+        width: 100%;
+        padding: 0rem;
+        flex-direction: column;
+        order: 2;
+    }
+
+    .points-block .points-text .points-list li{
+        width: 45%;
+    }
+
+    .points-block .points-images{
+        width: 100%;
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+
+    /* FIlter block */
+    .filter-block .filter-block-content {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding: 0;
+    }
+    .filter-block .filter-block-content :nth-child(1) {
+        order: 2;
+    }
+    .filter-block .filter-block-content :nth-child(3) {
+        order: 3;
+    }
+    .filter-block .filter-block-content :nth-child(2) {
+        order: 1;
+    }
+    .filter-block .filter-block-content .filter-image{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .filter-block .filter-block-content .filter-block-list{
+        width: 45%;
+    }
+    .filter-block .filter-description{
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+
+    /* international-block */
+    .international-block{
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .international-content{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .international-achivements{
+        justify-content: space-evenly;
+        margin-top: -20%;
+        width: 100%;
+        margin-left: 0;
+        order: 2;
+        padding: 0 4rem;
+
+    }
+    .international-achivements .achivement:last-child .description{
+        max-width: 120%;
+    }
+    .international-block .word-map{
+        display: flex;
+        justify-content: flex-end;
+        order: 1;
+    }
+
+    /* benefits-block */
+    .benefits-block .benefits-list{
+        justify-content: space-between;
+    }
+    
+    .benefits-list li{
+        width: 45%;
+        padding: 1rem 0;
+    }
+
+    /* contactus-block */
+    .contactus-block{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .contactus-block .contact-information{
+        display: flex;
+        width: 80%;
+        padding: 0 0;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    /* contact-form */
+    .contact-form {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        color: white; /* Ensures text is readable */
+        width: 80%;
+        height: 100%;
+        text-transform: uppercase;
+    }
+
     /* Footer */
     .footer{
         width: 100%;
@@ -716,10 +869,11 @@ button{
         display: none;
     }
     .navbar{
+        width: 90%;
         background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0));
         border-radius: 27px;
         height: 50px;
-        margin: 1rem;
+        margin: 1rem 5%;
     }
     .menu {
         display: none;
@@ -755,43 +909,20 @@ button{
         transform: rotate(-45deg);
         margin-right: 8px;
         transition: transform 0.3s ease-in-out;
-    }
-    
+    } 
     .menu-toggle.active::before {
         transform: rotate(135deg);
         top: 4px;
     }
 
-    /* Header*/
-    .header-block{
-        flex-direction: column;
-    }
-    .image-container{
+    /* Footer */
+    .footer{
         width: 100%;
     }
-    .image-container .image-box img{
-        width: 100%;
-        height: auto;
-    }
-    /* Points block */
-    .points-block{
-        width: 100%;
-    }
-    .points-block .points-text{
-        display: flex;
+    .footer-links{
         flex-wrap: wrap;
         width: 100%;
-        padding: 0 2rem;
-        flex-direction: column;
-    }
-    .points-block .points-images{
-        width: 100%;
-    }
-    .points-block .points-text .points-list{
-        width: 100%;
-    }
-    .points-block .points-text .points-list li{
-        width: 100%;
+        justify-content: space-between;
     }
 }
 
