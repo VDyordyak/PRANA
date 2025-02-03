@@ -709,15 +709,15 @@ button{
         margin: 4rem auto 0;
     }
     .image-box.control-img img{
-        width: 15%;
-        top: 26%;
-        left: -3%;
+        width: 13%;
+        top: 22%;
+        left: 5%;
         /* transform: rotate(45deg); */
     }
     .image-box.app-img img{
         width: 25%;
-        right: -10%;
-        top:28%;
+        right: -2%;
+        top:20%;
         /* transform: rotate(-45deg); */
     }
 
