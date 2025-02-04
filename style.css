@@ -174,6 +174,7 @@ body {
     width: 60%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -1;
 }
 /* points-block */
 
@@ -625,7 +626,6 @@ button{
     font-variant: all-small-caps;
     color: #FFFFFF;
     border: none;
-    margin-top: 1rem;
 }
 
 .footer {
@@ -711,12 +711,14 @@ button{
         width: 13%;
         top: 22%;
         left: 5%;
+        z-index: -1;
         /* transform: rotate(45deg); */
     }
     .image-box.app-img img{
         width: 25%;
         right: -2%;
         top:20%;
+        z-index: -1;
         /* transform: rotate(-45deg); */
     }
 
@@ -878,13 +880,14 @@ button{
         display: none;
         flex-direction: column;
         position: absolute;
+        z-index: 10;
         top: 60px;
         left: 0px;
-        
         border-radius: 27px;
         width: 100%;
         border-radius: 5px;
         padding: 10px 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0));
     }
 
     .menu li {
@@ -895,6 +898,9 @@ button{
     .menu-toggle {
         display: flex;
         color: rgba(53, 147, 198, 1);
+    }
+    .menu-toggle button{
+        margin-top: 0px;
     }
     .menu-toggle::before {
         content: "";
@@ -914,6 +920,54 @@ button{
         top: 4px;
     }
 
+    .points-block, .filter-block, .benefits-block, .contactus-block {
+        padding: 0 2rem;
+    }
+    /* header-block */
+    .header-block .title-block {
+        display: block;
+        width: 90%;
+        margin: 1rem auto 0;
+    }
+    .image-container .image-box.center-images{
+        width: 100%;
+        margin-top: 4rem;
+    }
+    .image-box.control-img img {
+        width: 15%;
+        top: 39%;
+        left: 6%;
+        /* transform: rotate(45deg); */
+    }
+    .image-box.app-img img {
+        width: 25%;
+        right: 0%;
+        top: 40%;
+        /* transform: rotate(-45deg); */
+    }
+    /* points-block  */
+    .points-block .points-text .points-list li{
+        width: 100%;
+    }
+    /* filter-block */
+    .filter-block .filter-block-content .filter-block-list {
+        width: 100%;
+    }
+    .filter-block .filter-block-content .filter-block-list li{
+        width: 100%;
+    }
+    .filter-block .filter-block-list.right li::before {
+        content: "•";
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+    .filter-block .filter-block-list.right li::after{
+        content: "";
+    } 
+    .filter-block .filter-block-content .filter-block-list.right {
+        align-items: center;
+        text-align: left;
+    }
     /* Footer */
     .footer{
         width: 100%;
@@ -923,6 +977,54 @@ button{
         width: 100%;
         justify-content: space-between;
     }
+
+    /* international-block */
+        .international-block .title, .international-block .subtitle{
+            padding: 0 2rem;
+        }
+        .international-achivements .achivement {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 4px 0;
+        }
+        .international-block .word-map {
+            display: flex;
+            justify-content: flex-end;
+            order: 1;
+            max-width: 100%;
+        }
+        .international-block .word-map img{
+            width: 100%;
+        }
+        .international-achivements{
+            padding: 0 2rem;
+        }
+        .international-achivements .achivement:last-child .description {
+            max-width: 100%;
+        }
+    /*  */
+        .benefits-list li {
+            width: 100%;
+            padding: 1rem 0;
+        }
+    
+    /*  */
+    .contactus-block .contact-information {
+        display: flex;
+        width: 100%;
+        padding: 0 0;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contactus-block .contact-information .title{
+        font-size: 2.5rem;
+    }
+
+    
 }
 
 
