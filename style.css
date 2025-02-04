@@ -438,7 +438,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Prevents overflow */
     margin-right: 2rem;
 }
 
