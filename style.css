@@ -26,7 +26,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1.6rem 1.6rem;
+    padding: 0.6rem 1.6rem;
     color: white;
     position: fixed;
     top: 0;
@@ -899,8 +899,6 @@ button{
     }
     .navbar{
         width: 90%;
-        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0));
-        box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
         border-radius: 27px;
         position: fixed;
         z-index: 1000;
@@ -913,7 +911,10 @@ button{
         position: absolute;
         /* z-index: 100; */
         width: 100%;
-        background: rgba(80, 177, 209, 1);
+        background: rgba(20, 20, 20, 0.3); /* Dark semi-transparent background */
+        backdrop-filter: blur(10px); /* Frosted glass effect */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
         left: 0%;
         border-radius: 27px;
         z-index: -1;
@@ -926,13 +927,13 @@ button{
         flex-direction: column;
         position: absolute;
         z-index: 1000;
-        top: 40px;
+        top: 54px;
         left: 0px;
         width: 100%;
         border-radius: 5px;
         padding: 1rem 0;
         /* background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0)); */
-
+        
     }
 
     .menu::after {
@@ -941,9 +942,13 @@ button{
         position: absolute;
         /* z-index: 100; */
         width: 100%;
-        background: rgba(80, 177, 209, 1);
+        background: rgba(20, 20, 20, 0.9); /* Dark semi-transparent background */
+        backdrop-filter: blur(10px); /* Frosted glass effect */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
         border-radius: 5px;
         left: 0%;
+        top: 0;
         z-index: -1;
         height: 100%;
         margin-top: 0px;
