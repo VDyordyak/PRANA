@@ -678,8 +678,10 @@ button{
     .mobile-hidden{
         display: none;
     }
-    .desktop-hidden{
+    .desktop-hidden {
         display: flex;
+        width: 100%;
+        justify-content: center;
     }
     .menu{
         width: 95%;
@@ -975,7 +977,7 @@ button{
     }
 
     .points-block, .filter-block, .benefits-block, .contactus-block {
-        padding: 0 2rem;
+        padding: 0 10%;
     }
     /* header-block */
     .header-block .title-block {
