@@ -30,7 +30,13 @@ body {
     color: white;
     position: fixed;
     top: 0;
+    background: rgba(20, 20, 20, 0.3); /* Dark semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
 }
+
+
 
 .navbar .logo img{
     height: 2.2rem;
@@ -990,9 +996,9 @@ button{
         margin-top: 4rem;
     }
     .image-box.control-img img {
-        width: 56px;
-        top: 192px;
-        left: 22px;
+        width: 15%;
+        top: 39%;
+        left: 6%;
         /* transform: rotate(45deg); */
     }
     .image-box.app-img img {
