@@ -134,6 +134,7 @@ body {
 }
 .image-box.control-img img{
     position: absolute;
+    z-index: -1;
     width: 8%;
     height: auto;
     left:20%;
@@ -144,6 +145,7 @@ body {
 .image-box.app-img img{
     /* PHONE APP */
     position: absolute;
+    z-index: -1;
     width: 10%;
     height: auto;
     right: 20%;
@@ -154,6 +156,7 @@ body {
 .image-box.cap-img img{
     /* METAL CAP */
     position: absolute;
+    z-index: -1;
     width: 36%;
     height: auto;
     left: 0%;
@@ -163,6 +166,7 @@ body {
 .image-box.outer-cap-image img{
     /* OUTER CAP */
     position: absolute;
+    z-index: -1;
     width: 16%;
     height: auto;
     right: 12%;
@@ -202,6 +206,8 @@ body {
 .points-block .points-images img{
     width: 100%;
     height: auto;
+    border-radius: 10px; /* Optional: Rounds the edges */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.8);
 }
 .points-block .title,
 .filter-block .title,
@@ -390,6 +396,7 @@ body {
         width: 100%;
         height: 100%;
         position: absolute;
+        z-index: -1;
         right: -1.56rem;
     }
 }
@@ -497,6 +504,7 @@ body {
 .contacts-email::before, .contacts-phone::before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -539,6 +547,7 @@ body {
 .contact-form::before{
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -551,7 +560,9 @@ body {
 .massage-form{
     padding: 2rem;
 }
-
+.massage-form button{
+    margin-top: 1rem;
+}
 .form-group {
     display: flex;
     flex-direction: column;
@@ -608,6 +619,7 @@ label {
     font-weight: 600;
     font-size: 1rem;
     line-height: 20px;
+    text-align: left;
     /* identical to box height */
     font-variant: all-small-caps;
     color: #FFFFFF;
@@ -863,6 +875,14 @@ button{
         width: 80%;
         justify-content: space-evenly;
     }
+    .footer {
+        display: flex
+    ;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -872,32 +892,66 @@ button{
     .navbar{
         width: 90%;
         background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0));
+        box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
         border-radius: 27px;
+        position: fixed;
+        z-index: 1000;
         height: 50px;
         margin: 1rem 5%;
     }
+    .navbar::after {
+        content: "";
+        display: block;
+        position: absolute;
+        /* z-index: 100; */
+        width: 100%;
+        background: rgba(80, 177, 209, 1);
+        left: 0%;
+        border-radius: 27px;
+        z-index: -1;
+        height: 100%;
+        /* margin: 1rem 5%; */
+    }
+    
     .menu {
         display: none;
         flex-direction: column;
         position: absolute;
-        z-index: 10;
-        top: 60px;
+        z-index: 1000;
+        top: 40px;
         left: 0px;
-        border-radius: 27px;
         width: 100%;
         border-radius: 5px;
-        padding: 10px 0;
-        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0));
+        padding: 1rem 0;
+        /* background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(80, 177, 209, 0)); */
+
+    }
+
+    .menu::after {
+        content: "";
+        display: block;
+        position: absolute;
+        /* z-index: 100; */
+        width: 100%;
+        background: rgba(80, 177, 209, 1);
+        border-radius: 5px;
+        left: 0%;
+        z-index: -1;
+        height: 100%;
+        margin-top: 0px;
     }
 
     .menu li {
-        margin: 10px 0;
+        width: 80%;
         text-align: center;
+        margin: 0.2rem;
+        /* background: linear-gradient(90deg, #FFFFFF 0%, rgba(91, 192, 240, 0.5) 100%); */
     }
 
     .menu-toggle {
         display: flex;
-        color: rgba(53, 147, 198, 1);
+        /* color: rgba(53, 147, 198, 1); */
+        color: #FFFFFF;
     }
     .menu-toggle button{
         margin-top: 0px;
@@ -909,8 +963,8 @@ button{
         top: -4px;
         width: 10px;
         height: 10px;
-        border-left: 2px solid rgba(53, 147, 198, 1);
-        border-bottom: 2px solid rgba(53, 147, 198, 1);
+        border-left: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
         transform: rotate(-45deg);
         margin-right: 8px;
         transition: transform 0.3s ease-in-out;
@@ -934,15 +988,15 @@ button{
         margin-top: 4rem;
     }
     .image-box.control-img img {
-        width: 15%;
-        top: 39%;
-        left: 6%;
+        width: 56px;
+        top: 192px;
+        left: 22px;
         /* transform: rotate(45deg); */
     }
     .image-box.app-img img {
-        width: 25%;
-        right: 0%;
-        top: 40%;
+        width: 92;
+        right: 0px;
+        top: 198px;
         /* transform: rotate(-45deg); */
     }
     /* points-block  */
@@ -972,10 +1026,12 @@ button{
     .footer{
         width: 100%;
     }
-    .footer-links{
+    .footer-links {
         flex-wrap: wrap;
         width: 100%;
-        justify-content: space-between;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 2rem;
     }
 
     /* international-block */
