@@ -223,10 +223,11 @@ body {
     font-weight: 800;
     font-size: 2rem;
     line-height: 2.2rem;
-    /* identical to box height */
     font-variant: all-small-caps;
     margin-bottom: 2rem;
     color: #FFFFFF;
+    display: block;  /* Ensures full-width text behavior */
+    width: 100%; /* Prevents centering issues */
 }
 .points-block .points-text .points-list,
 .filter-block .filter-block-list
@@ -317,6 +318,18 @@ body {
     text-align: center;
     font-variant: all-small-caps;
     color: #FFFFFF;
+}
+.filter-block .filter-block-content .filter-image .video-container{
+    width: 100%; /* Adjust the percentage as needed */
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    align-items: center; /* Centers it vertically (if needed) */
+    height: 100%;
+}
+.filter-block .filter-block-content .filter-image .video-container iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Automatically maintains 16:9 aspect ratio */
+    height: auto;
 }
 
 /* international-block */
@@ -688,6 +701,8 @@ button{
         display: flex;
         width: 100%;
         justify-content: center;
+        align-items: center; /* Fixes vertical alignment */
+        text-align: center;
     }
     .menu{
         width: 95%;
@@ -799,7 +814,9 @@ button{
     .filter-block .filter-block-content .filter-image{
         width: 100%;
         margin-bottom: 2rem;
+        height: 100%;
     }
+
     .filter-block .filter-block-content .filter-block-list{
         width: 45%;
     }
