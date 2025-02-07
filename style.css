@@ -30,6 +30,7 @@ body {
     padding: 0.6rem 1.6rem;
     color: white;
     position: fixed;
+    z-index: 100;
     top: 0;
     background: rgba(20, 20, 20, 0.3); /* Dark semi-transparent background */
     backdrop-filter: blur(10px); /* Frosted glass effect */
