@@ -1,7 +1,7 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
@@ -989,6 +989,7 @@ button{
     .menu li:first-child::before{
         border-top: none;
     }
+    
     .menu li::before{
         content: "";
         position: absolute;
@@ -1129,6 +1130,12 @@ button{
     }
     .contactus-block .contact-information .title{
         font-size: 2.5rem;
+    }
+    h2{
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
 
     
